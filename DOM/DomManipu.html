@@ -1,0 +1,78 @@
+<!-- DOM means document object model -->
+<!-- here is the dom manupulation -->
+<!-- innerHtml apko poora html deta ha ye html tags ko bhi support krta ha jab k innertext or textContent html tag ko supoort nai krte innertext ma jitni value display kraenge bas wohi nzr ayegi or usi ma changes ker skte hain jab k textcontent mein hmen jo display karate ha wo b milta jo nai krate wo b milta ha content is liye ye poora k poora content hmen deta ha  -->
+
+
+<!-- *******querySelector********* this give us just one value-->
+<!-- querySelector se ham h1 ko access kr skte hain jese first h1 ko or first h2 ko means k first walon ko access ktr skte hain is se # or . se id or class ko b access kr skte hain or input tag b is se select kr skte hain -->
+
+
+<!--// you can use querySelector for changing color etc to ese use kr skte -->
+<!-- document.querySelector('ul')
+<ul>​…​</ul>​
+const shazishiza = document.querySelector('ul')
+undefined
+shazishiza.querySelector('li')
+<li>​…​</li>​::marker​"one"</li>​
+const hey = shazishiza.querySelector('li')
+undefined
+hey.style.backgroundColor = "pink"
+'pink'// you can also chnge their value by queryselector after storing the value in it -->
+
+
+<!--***************** querySelectorAll************* -->
+<!-- nodelist and HTML Collection are not pure aray map array ma define hota ha tbhi to ham use kr pate hain map ye array ma define hota ha jab k nodelist ma sirf for each define hota ha map nai  array k prototype ma map define hota tbhi to use kr pte hain-->
+<!-- ye nodelist array ha nai par ye array se kafi ziada milti b jti ha//
+ nodelist ko value deni pre gi k isko change kro mean k uski value 0 se staRT HOGI or length utni hi rehegi jese 0 wala phle hoga or one uske bad wala-->
+
+
+<!-- *****for each****  node list ma ziada tar koshish kren k foreach loop hi use kren kiun nodelist aray nai ha to app ko phle nodelist ko array ma convert krna prega to uske jo mrzi lagye-->
+<!-- nodelist ko .from k zriyw ap phle array ma convert krenge kiun k map ki functinality agar chahiye ho to phle nodelist ko array ma convert krna prega us k bad jo mrzi chahen us p lagaye-->
+<!--// for each se sabhi ko hm select kr style us pr use kr skte hain ...like...
+shizashazi
+NodeList(4) [h2, h2, h2, h2]0: h21: h22: h23: h2length: 4[[Prototype]]: NodeList
+shizashazi.forEach(()=>{})
+undefined
+shizashazi.forEach((s)=>{s.style.backgroundColor = "red"}) //-->
+
+
+
+<!-- *******HTML Collection -->
+<!-- this is differnt from nodelist  queryselectorAll mein nodelist ati ha but className ma HTML collection ata ha jab b kisi page ma DOM manupulation kren to queryselectorall se jab b koi id ya class ko access kren to us k innertext ko pta krne k bad doosri bar variable ko declaree pr foreach nai lagta kiun k whole class ya id lagana hota ha ham sirf access krne k liye [0],[1] lkhte hain jis se likhte hain to us p for each lagana prta ha  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM introduction</title>  
+    <style>
+        .bg-black{
+            background-color: black;
+           color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+    <h1 id="this" class="who"> learning Dom <span style="display: none;">is good</span></h1>
+    <h2>Lorem, ipsum.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam corrupti assumenda asperiores praesentium. Sit saepe repellat eius quia minus expedita dolor modi necessitatibus quasi minima? Fugit unde corporis eveniet et?</p>
+
+<input type="password" name="shazishiza" id="">
+
+<ul>
+    <li class="list">one</li>
+    <li class="list">two</li>
+    <li class="list">three</li>
+    <li class="list">four</li>
+</ul>
+</div>
+
+</body>
+</html>
