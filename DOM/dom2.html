@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Part 2</title>
+</head>
+<body style="background-color: black; color: white;">
+     <div class="weeks">
+        <!-- this is shizashazi -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div> 
+</body>
+<script>
+  const chand =  document.querySelector('.weeks')
+    // console.log(chand) // this will give the whole parent values and children with html tags
+
+    // console.log(chand.children) // this will give us the HTML collection and their children
+
+    // console.log(chand.children[4]) // ye bateye ga k konsa children chahte ho this will start from 0
+
+    for (let i = 0; i < chand.children.length; i++) { // chand.children lagayen ge for lopp ma kiun chand.children ma hmen html clkection mila ha// is html collection ma for loop lag skta ha foreach lgane k liye isko array ma convert krna prega
+
+    //    console.log(chand.children[i].innerHTML) // this will give the innerHTMl like tuesday wednesday etc
+    
+    }
+
+    // applying some styling
+     // chand.children[1].style.color = "red" // is trha ap parent k child k uper styling waghera kr skte hain
+    // chand.children[2].style.backgroundColor = "yellow"
+    // chand.children[2].style.color = "black"
+
+// knowing first element child and last
+    // console.log(chand.firstElementChild); // this will give you first child
+    // console.log(chand.lastElementChild); // this will give you last child
+
+
+
+// movement from child to parent and child to nextSibling
+const day1 = document.querySelector('.day')
+// console.log(day1);
+// console.log(day1.parentElement); // here is how you move from child to parent 
+// console.log(day1.nextElementSibling); // here is how you move from child to nextelement sibings 
+
+
+
+// childnodes concept
+// console.log("Nodes:", chand.childNodes); // means k uske p ap ne entr kra wo text count hoga then uska k bad apka div.day agya apka srf ek bar enter krna hi browser p count hoga ek se ziada nai count nai hoga count 
+
+
+
+</script>
+</html>
