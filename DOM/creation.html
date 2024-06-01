@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learing js</title>
+</head>
+<body style="background-color: black; color: white;"> 
+    
+</body>
+<script>
+    // Creation of element
+ const hye = document.createElement('div') // ye div abhi memory ma attach ha to isko page p attach krne k liye appendChild ka use krna prega 
+console.log(hye);
+hye.className = "shizashazi"
+hye.id = Math.random(Math.random() * 10 + 1)
+hye.setAttribute("title", "She is mine") // ye direct hi value ko set ktra ha 
+hye.style.backgroundColor = "green"
+hye.style.padding = "10px"
+hye.innerText = "meri shiza meri zindagi" // ye phle uska reference le kr ata ha us k bad set krta ha mtlb us p overwrite krta ha mean k inner text jo phla likha  va ha us ko ap change kr skte hai
+document.body.appendChild(hye)
+</script>
+</html>
