@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body style="background-color: black; color: white;">
+    <!-- <ul class="heyNice">
+        <li>javascript</li>
+    </ul> -->
+
+    <ul class="shizashazi">
+        <li>shazi</li>
+    </ul>
+</body>
+<script>
+    // ye basic project k lye hai k kese function k zriye elemnt ko create kr skte hian 
+
+    // function addme(name){
+    //   const nope =  document.createElement('li')
+    //   nope.innerHTML = `${name}`
+    //   document.querySelector('.heyNice').appendChild(nope)
+    // }
+    // addme("python")
+    // addme("js")
+
+
+// function hence(name){
+//    const she =  document.createElement('li')
+//    she.innerHTML = `${name}` // yahan p variable k bad innerhtml lagate hain to sab k sab ko traversing hoti ha is liye innerhtml k peeche na hi bhagen to acha ha 
+//    document.querySelector('.shizashazi').appendChild(she)
+// }
+// hence("shizashazi")
+// hence("meriZindagi")
+
+
+
+// ye bare project kliye ha but ye reccomended ha is ma traversing nai hoti ye tarika thek ha function k zriye element create krne ka 
+
+// function why(who){
+//   const hey =  document.createElement ('li')
+//   hey.appendChild(document.createTextNode(who)) // is ma variable k bad appendChild use krte hain ye traversing nai krta 
+//   document.querySelector('.shizashazi').appendChild(hey)
+// }
+// why("shazi")
+// why("shiza")
+
+// Another example
+function who(name){
+ const hyy=  document.createElement('li')
+ hyy.appendChild(document.createTextNode(name))
+ document.querySelector('.shizashazi').appendChild(hyy)
+}
+who("shazichand")
+who("meri zindagi")
+
+
+
+// function addme(who){
+// const she = document.createElement('li')
+// she.appendChild(document.createTextNode(who))
+// document.querySelector('.shizashazi').appendChild(she)
+// }
+// addme("nice")
+// addme("js")
+// addme("who")
+
+
+// ********how to edit an element********//
+// const eyes = document.querySelector("li:nth-child(2)")
+// console.log(eyes);
+// const light = document.createElement('li')
+// light.textContent = "chand"
+// eyes.replaceWith(light) 
+
+
+// another e:g
+// const new3 = document.querySelector("li:nth-child(2)")
+// const noo = document.createElement('li')
+// noo.textContent = "jan"
+// new3.replaceWith (noo)
+
+
+const new3 = document.querySelector("li:nth-child(2)")
+new3.outerHTML = '<li>chuuuuu</li>'
+
+
+// const dream = document.querySelector('li:nth-child(1)')
+// console.log(dream);
+// const new1 = document.createElement('li')
+// new1.textContent = "zindagi"
+// dream.replaceWith(new1)
+
+// // ye b ek trika ha outer html k zrye se krne ka edit
+// const hey = document.querySelector('li:nth-child(4)')
+// hey.outerHTML = "<li>love</li>"
+
+// // how to remove an element
+// const nope = document.querySelector('li:last-child')
+// nope.remove()
+    </script>
+</html>
