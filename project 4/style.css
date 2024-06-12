@@ -1,0 +1,64 @@
+nav{
+    background-color: antiquewhite;
+    color: black;
+    padding: 34px;
+    text-align: center;
+    height: auto;
+    margin: 34px;
+
+}
+
+nav a{
+    gap: 23px;
+    margin: 23px;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 34px;
+    padding: 12px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.func{
+    background-color: black;
+    color: white;
+}
+#hey{
+    text-align: center;
+}
+
+p{
+padding: 12px;
+}
+
+#nope{
+    font-size: larger;
+    font: 800;
+    font-weight: bold;
+
+}
+
+#guessingField{
+    padding: 7px;
+    margin-bottom: 23px;
+    border-radius: 12px;
+}
+
+#subt{
+padding: 12px;
+border: 1px solid black;
+border-radius: 12px;
+}
+
+.result{
+    /* margin-top: 8px; */
+    font-size: large;
+}
+/* .oho{
+    /* margin-bottom: 30px; */
+/* } */ */
+.this{
+    margin-top: 12px;
+}
