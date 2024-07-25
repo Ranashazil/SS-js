@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h2>this is my code</h2>
+    <button id="cancel">Cancel this</button>
+    <button id="start">start this</button>
+    <!-- <button id="cancel2">stopAll</button> -->
+</body>
+<script>
+
+//     const hey = function(){  // set timeout sirf ek bar print krta ha ...bar bar ni krta
+//         console.log("shaziShiza")
+//     }
+//     setTimeout(hey, 2000)
+
+
+//     const whatIs = function(){
+//          document.querySelector('h2').innerHTML = "this is our favourite code"
+//     }
+//       const change = setTimeout(whatIs, 2000)
+// document.querySelector('#cancel').addEventListener('click', function(){
+//     clearInterval(change)
+//     console.log("Cancel this");
+// })
+
+
+// ************************project one
+const change = function(str){
+    console.log(str, Date.now());
+}
+const who =  setInterval(change, 1000, "hey")
+ document.querySelector('#cancel').addEventListener('click', function(){
+    clearInterval(who)
+    console.log("Stop plz");
+    // clearInterval(intervalId);
+    // intervalId = null;
+   
+})
+// let intervalId;
+const why = document.querySelector('#start').addEventListener('click', function(str){
+    console.log(str, Date.now());
+    setInterval(change, 1000, "hey")
+//   intervalId =  setInterval(change, 1000, "hey")
+//    clearInterval(she)
+})
+</script>
+</html>

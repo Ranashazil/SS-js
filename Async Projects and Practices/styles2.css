@@ -1,0 +1,22 @@
+nav{
+
+    /* margin-left: 34px; */
+    background-color: aqua;
+    padding: 23px;
+    
+}
+
+a{
+     margin-left: 450px;
+     font-size: large;
+     /* justify-content: space-around; */
+   border: 1px solid black;
+   border-radius: 5px;
+     text-align: center;
+     justify-items: center;
+     text-decoration: none;
+     color: black;
+     padding: 15px;
+     gap: 12px;
+     justify-content: space-around;
+}
