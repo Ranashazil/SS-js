@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const shazishiza = 'https://api.github.com/users/Ranashazil'
+  const xxl =   new XMLHttpRequest();
+  xxl.open('GET', shazishiza)
+  xxl.onreadystatechange = function(){  // jese hi state chnge hoti ha bar ye function execute hota ha  har state k chnge hone p
+      console.log(xxl.readyState);
+      if (xxl.readyState === 4) {
+
+const data = JSON.parse(this.responseText) // ye parse jo ha string ko jSon ma convert krdeta ha
+console.log(typeof data);
+    console.log(data.login);
+  }
+  }
+
+  
+  xxl.send();
+</script>
+</html>
