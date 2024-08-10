@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind in JS </title>
+</head>
+<body>
+    <button>button clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.name = "React langugae "
+            this.server = "https://localhost:3000"
+
+            //   requiremnts 
+            //1-  we want that jese hi page load ho to ek object create hojye react ka 
+            // 2- ek to button ka refercnce mil jye 
+            // 3- or kuch click hone pr jldi se click hijye
+            
+
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this)) //this se uska refernce ajyga kiun k ese hmre pas iska refernce ni ha 
+            //to ye call kiya us ne par ni ho raha kaam to isi liye is problem ka solutiion ha bind ab hmen manually forcefully bind ka refernce ni chahiye blke usko bind krna atttach krna ha uske sath to is se huwa ye k sath ma jitne bhi baqi this hain this k variables hain function hain wo bhi us k sath attach ho kr chle gye hain this ki surat ma sab ko handle click wale this k saath bnd kreiya ha is se react ma jitne function define kiye gye the unka b access mlta ha 
+
+
+            
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this); // this mtlb jis ne call kiya to document ma button ne caLL kiya ha 
+            // console.log(this.name);
+            // console.log(this.server); // agar ap just server ka lena chahte hain to ese le skte hain 
+            
+            
+            
+            
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
