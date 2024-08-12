@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure ana lexical scope</title>
+  </head>
+  <body style="background-color:black;">
+
+    <button id="you">red</button>
+    <button id="here">Green</button>
+
+
+    <script>
+
+        // ***********MDN Example****************//
+
+    //   function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //       console.log(name);
+    //     }
+    //     displayName();
+    //   }
+    //   init();
+
+
+
+    // ********************lexical Scoping************************//
+
+
+    function hey(){  // jo b hamne function m declare kra wo outer space ma available ni hoga ...jese k name1 scope k bahir usko rkhen ge to not defined ka error dega
+        // 2 - agar function k ander function ban jye to hm doosre function k bhr or phle k ander jo b vairable ho wo hm doosre funtion ma access kr skte hain... 
+
+        let name1 = "mine";
+
+// console.log(ignore); // is se b pta chla parent child se ni mang skta kuch b mtlb us ma variable declare kiya gya parent ma access ni hoskta
+// 2 - As a fun yesmjh aya k bare choton se ni mang skte but chote baron se mang skte hain or chote ek doosre chote k sath apni chez share ni krte
+
+
+        function inner(){
+            let ignore = "go" // not acessable
+            // console.log("inner is", name1); 
+        }
+        function shizaShazi(){
+            console.log("you are", name1);
+            // console.log(ignore); // to pta chla parent function se to ap kuch b variable ko access kr skte ho par child function ma ham variable ek doosre k sath share/access ni kr skte
+        }
+
+        inner()
+        shizaShazi() // ye brackets call krne k liye lagte simple bas refewrence k luye hota
+
+    }
+    hey()
+    // console.log("outerIs", name1); // jo function k ander variable declare kiya ha uska scope k bahir koi accesss ni ha 
+
+
+    // *********************Closure******************//
+// 1- closure ma ye smjh aya k jab ap function return krte ho to wo function return ni hota blke poora scope return hta ha or scope hi ni blke poora ka poora lexical scope return hota ha
+
+
+    function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName; // is return ma just executions context ni balke poora ka poora lexical scoping ja raha ha uth kr 
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+  
+// some example about closure scoping.//
+
+function Clickhandler(color){
+ return function(){
+    document.body.style.backgroundColor = `${color}` // hmre pas outer function ka inner function ma access ha or tbhi ye lexical scope ha agar access ni hota to ye lexical scope ni hota 
+    // just function ni poora lexical scope uth k jata ... bahir.. to poora jo outer function ma lexical scope tha wo uth k bahir gya ha or is waja sa hmra code run ho chukka ha ... ye 
+ }
+}
+
+document.getElementById('you').onclick = Clickhandler("red")
+document.getElementById('here').onclick = Clickhandler("green")
+
+    
+    </script>
+  </body>
+</html>
